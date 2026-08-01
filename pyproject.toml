@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jmm-host-pathogen-analysis-reconstruction"
+version = "0.1.0.dev0"
+description = "Historical reconstruction of a host-pathogen microscopy analysis"
+requires-python = ">=3.10"
+authors = [
+  {name = "Carlos Victor Montefusco-Pereira"}
+]
+readme = "README.md"
+license = {text = "License pending; all rights reserved"}
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

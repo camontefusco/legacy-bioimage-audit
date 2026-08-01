@@ -1,0 +1,20 @@
+{
+  "analysis_branch": "submitted_notebook_04_reconstruction",
+  "n_images": 12,
+  "area_fraction_min": 0.06077851317020992,
+  "area_fraction_max": 0.09252598926894702,
+  "mean_object_area_overall": 336.49994407652616,
+  "maximum_object_area_overall": 7731.0,
+  "regressions": {
+    "tobramycin": {
+      "n_images": 6,
+      "slope": 20.513739864514545,
+      "r_squared": 0.008860778186509433
+    },
+    "untreated": {
+      "n_images": 6,
+      "slope": 523.6807027162672,
+      "r_squared": 0.9004750919183584
+    }
+  }
+}

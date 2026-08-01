@@ -1,0 +1,24 @@
+# Core numerical/data libraries
+numpy
+pandas
+
+# Image loading and processing
+pillow
+scikit-image
+scipy
+
+# Plotting and figures
+matplotlib
+seaborn
+
+# Statistical and exploratory modeling
+scikit-learn
+
+# Jupyter notebooks
+jupyter
+notebook
+ipykernel
+
+# Optional interactive image viewer
+napari
+pyqt5

@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+data/raw_confocal_images/
+results/regenerated_submission/
+results/figures/
