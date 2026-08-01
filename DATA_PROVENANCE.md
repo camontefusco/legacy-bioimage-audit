@@ -6,6 +6,8 @@ The historical analysis used 12 rendered panels cropped from Figure 34 of Carlos
 
 The thesis caption reports two images per sample from three independent experiments. The original Leica TCS SP8 acquisitions, acquisition metadata, field-to-well mapping, and experiment identifiers have not been recovered into this repository.
 
+A targeted Google Drive audit on 2026-08-01 found that the folder named `raw_confocal_images` contains only the `thesis_screenshots` hierarchy. Searches for Leica `.lif`, `.xlef`, `.lei`, and `.czi` files and for Figure 35 CFU source data did not locate originals in the accessible Drive corpus.
+
 ## Included
 
 - Code sufficient to reconstruct the submitted analysis branch when authorized input panels are supplied.
@@ -25,4 +27,3 @@ The thesis caption reports two images per sample from three independent experime
 ## Interpretation restriction
 
 Outputs from this package describe selected, rendered figure panels. They cannot establish treatment effects, bacterial clearance or viability, biofilm formation, persistence, aggregation, or host-cell effects.
-
