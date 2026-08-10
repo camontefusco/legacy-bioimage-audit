@@ -9,7 +9,7 @@
 - [x] Select an open license for prose and educational graphics: CC BY 4.0.
 - [x] Replace `LICENSE_PENDING.md` with the approved license files.
 - [x] Update `pyproject.toml` and `CITATION.cff` with the selected license.
-- [ ] Add a private conduct-reporting email address or form.
+- [x] Add a private GitHub reporting form and document it in `SECURITY.md`.
 
 ## Technical checks
 
