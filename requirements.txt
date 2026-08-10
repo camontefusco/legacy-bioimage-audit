@@ -10,6 +10,7 @@ scipy
 # Plotting and figures
 matplotlib
 seaborn
+scikit-learn
 
 # Jupyter notebooks
 jupyter
