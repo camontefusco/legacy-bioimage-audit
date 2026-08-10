@@ -21,6 +21,8 @@ Start with `EXPERIMENTAL_TO_DATA_SCIENCE_GUIDE.md`, then use the executable note
 
 `PUBLICATION_STRATEGY.md` gives the release route. `paper.md` is a transition guide from qualitative experimental observation to quantitative analysis; it makes no claim of educational effectiveness.
 
+The citation-resolved archival report is available at `output/pdf/qualitative-to-quantitative-transition-guide.pdf`. Rebuild and QA instructions are in `REPORT_BUILD.md`.
+
 The optional small-pilot package under `pilot/` includes invitation text, a facilitator guide, a learner worksheet, anonymous feedback prompts, and a session-level results template. Running a pilot is not required for the technical report or archival release.
 
 The executable teaching notebook is `notebooks/01_educational_sensitivity_analysis.ipynb`. It compares analysis configurations panel by panel and deliberately omits treatment hypothesis tests and predictive modeling.

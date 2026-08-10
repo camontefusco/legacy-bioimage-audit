@@ -6,8 +6,7 @@ tags:
   - quantitative microscopy
   - reproducibility
   - experimental design
-authors:
-  - name: Carlos Victor Montefusco-Pereira
+author: Carlos Victor Montefusco-Pereira
 date: 2026-08-10
 bibliography: paper.bib
 ---

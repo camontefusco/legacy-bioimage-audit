@@ -12,3 +12,4 @@
 - Licensed software under MIT and original educational content and synthetic graphics under CC BY 4.0.
 - Pivoted the manuscript from an evaluated learning-module submission to a self-contained technical tutorial and Zenodo release.
 - Reframed the tutorial around experimental scientists' transition from qualitative observation to quantitative data science, with legacy recovery as a boundary case.
+- Added a citation-resolved, visually verified archival PDF of the transition guide.
