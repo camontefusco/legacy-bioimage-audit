@@ -86,7 +86,7 @@ The project originated from an attempted reconstruction in which the original mi
 
 This is an educational module and worked computational demonstration, not an evaluation of learner outcomes, a segmentation benchmark, or a validated biological method. The three published-image notebooks deliberately use small teaching samples to keep decisions inspectable; their numerical summaries should not be generalized to the full datasets. The simple thresholding operations are chosen for transparency rather than state-of-the-art performance. Constructs, controls, and image-processing choices must be adapted to the instrument, modality, specimen, and scientific question.
 
-The module currently focuses on fluorescence microscopy. Its general reasoning may transfer to other qualitative experimental materials, but that broader transfer has not been demonstrated. A future teaching evaluation could examine usability and changes in learners' ability to specify constructs and evidence boundaries, but no educational-effectiveness claim is made here.
+The module currently focuses on fluorescence microscopy. Its general reasoning may transfer to other qualitative experimental materials, but that broader transfer has not been demonstrated. It is offered as a self-study resource and optional instructor-led module. No independent usability assessment, classroom evaluation, or learner-outcomes study has been conducted or is claimed.
 
 # Availability, licensing, and AI assistance
 

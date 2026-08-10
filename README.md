@@ -6,7 +6,7 @@ This repository is an open computational learning module for experimental scient
 
 ## Status
 
-This is a teaching module, not a validated biological pipeline, segmentation benchmark, or evaluation of educational effectiveness. Published-image cases deliberately use small teaching samples so that analytical decisions remain inspectable. Their numerical outputs must not be generalized to the full source datasets.
+This is an unevaluated self-study teaching module, not a validated biological pipeline, segmentation benchmark, usability study, or evaluation of educational effectiveness. Published-image cases deliberately use small teaching samples so that analytical decisions remain inspectable. Their numerical outputs must not be generalized to the full source datasets.
 
 Start with `EXPERIMENTAL_TO_DATA_SCIENCE_GUIDE.md`, then work through the notebooks in numerical order. `EDUCATIONAL_USE_GUIDE.md` provides the module sequence, and `CLAIM_BOUNDARY.md` defines what the exercises do and do not support.
 

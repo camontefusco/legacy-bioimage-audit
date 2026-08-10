@@ -20,14 +20,15 @@ The module is a plausible Journal of Open Source Education (JOSE) learning-modul
 ## Remaining pre-submission items
 
 1. Recheck JOSE's eligibility and submission status before filing.
-2. Obtain at least one documented independent installation/adoption test. JOSE asks how a module has been used; the manuscript must continue to state honestly that learner outcomes have not been evaluated.
-3. Reduce the paper toward JOSE's current guidance of about 1,000 words while preserving the longer transition guide as project documentation.
-4. Confirm the final author name, affiliation, ORCID (if available), funding statement, acknowledgements, and contributor list.
-5. Create a new versioned archive only when the post-review or submission-stage repository state is stable. Do not overwrite the existing v0.1.0 archive.
+2. Reduce the paper toward JOSE's current guidance of about 1,000 words while preserving the longer transition guide as project documentation.
+3. Confirm the final author name, affiliation, ORCID (if available), funding statement, acknowledgements, and contributor list.
+4. Create a new versioned archive only when the post-review or submission-stage repository state is stable. Do not overwrite the existing v0.1.0 archive.
+
+An independent evaluator or learner study is not planned. The resource is offered for self-study and optional instructor adoption. Its documentation and paper must not imply that usability, adoption, or learning outcomes have been evaluated. If JOSE later requires prior classroom use as an eligibility condition, a different publication route should be selected rather than manufacturing evaluation evidence.
 
 ## Evidence boundary for editors and reviewers
 
-The contribution is the instructional design and inspectable computational module. It is not a new segmentation method, a biological validation study, a benchmark, or evidence that the module improves learner outcomes.
+The contribution is the instructional design and inspectable computational module. It is not a new segmentation method, a biological validation study, a benchmark, or evidence that the module improves usability or learner outcomes.
 
 ## Authoritative references checked
 
