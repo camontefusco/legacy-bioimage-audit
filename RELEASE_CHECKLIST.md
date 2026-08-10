@@ -22,6 +22,15 @@
 - [x] GitHub Actions passes on Python 3.10 and 3.12 in the public repository.
 - [ ] A clean installation is tested on another computer or container.
 
+## JOSE readiness
+
+- [x] Audit current JOSE scope, licensing, paper, and repository requirements.
+- [x] Document the 2026-08-10 submission pause in `JOSE_READINESS.md`.
+- [ ] Obtain one independent installation or adoption test.
+- [ ] Reduce the JOSE submission paper toward the journal's approximately 1,000-word guidance.
+- [ ] Confirm final author metadata, funding statement, acknowledgements, and ORCID if applicable.
+- [ ] Recheck that JOSE is accepting submissions before filing.
+
 ## Archival publication checks
 
 - [x] Pivot `paper.md` to a transition guide from qualitative experimental observation to quantitative data.

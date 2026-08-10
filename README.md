@@ -2,38 +2,34 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21876822.svg)](https://doi.org/10.5281/zenodo.21876822)
 
-This repository helps experimental students and researchers translate qualitative microscopy observations into defensible quantitative variables, structured datasets, quality-control procedures, and appropriately limited claims. Its public exercise runs entirely on deterministic synthetic panels. A recovered legacy analysis is retained as a cautionary provenance case.
+This repository is an open computational learning module for experimental scientists who want to turn qualitative microscopy observations into defensible quantitative variables. Four executable notebooks use deterministic synthetic images and small, declared samples from public microscopy collections to teach measurement design, sensitivity analysis, experimental hierarchy, quality control, and claim restraint.
 
 ## Status
 
-This is a provenance and methods-recovery package. It is **not** a validated biological treatment-effect pipeline. The original analysis used 12 cropped thesis figure panels, one per experimental condition, without independent biological replication or raw acquisition metadata.
+This is a teaching module, not a validated biological pipeline, segmentation benchmark, or evaluation of educational effectiveness. Published-image cases deliberately use small teaching samples so that analytical decisions remain inspectable. Their numerical outputs must not be generalized to the full source datasets.
 
-The thesis caption states that the underlying experiment included two images per sample from three independent experiments. Those original Leica SP8 acquisitions and their sample mapping have not yet been recovered. Depending on how the caption's sampling statement applies across the 12 conditions, the complete collection may contain up to 72 acquisitions; that is a recovery hypothesis, not a confirmed sample count.
-
-The repository intentionally separates:
-
-- the submitted 90th-percentile connected-component analysis;
-- a later Otsu/watershed batch pipeline that produced materially different results.
-
-See `ANALYSIS_BRANCHES.md` and `MANUSCRIPT_CODE_RECONCILIATION.md` before interpreting any output.
-
-Also read `DATA_PROVENANCE.md` for the exact data boundary and the licensing section below before copying or distributing the package.
-
-Start with `EXPERIMENTAL_TO_DATA_SCIENCE_GUIDE.md`, then use the executable notebook. `EDUCATIONAL_USE_GUIDE.md` provides the longer module sequence, and `CLAIM_BOUNDARY.md` defines statements the historical evidence does and does not support.
+Start with `EXPERIMENTAL_TO_DATA_SCIENCE_GUIDE.md`, then work through the notebooks in numerical order. `EDUCATIONAL_USE_GUIDE.md` provides the module sequence, and `CLAIM_BOUNDARY.md` defines what the exercises do and do not support.
 
 `PUBLICATION_STRATEGY.md` gives the release route. `paper.md` is a transition guide from qualitative experimental observation to quantitative analysis; it makes no claim of educational effectiveness.
 
 The citation-resolved archival report is available at `output/pdf/qualitative-to-quantitative-transition-guide.pdf`. Rebuild and QA instructions are in `REPORT_BUILD.md`.
 
-The immutable `v0.1.0` software and report archive is available from [Zenodo](https://doi.org/10.5281/zenodo.21876822).
+The immutable `v0.1.0` archive is available from [Zenodo](https://doi.org/10.5281/zenodo.21876822). The current repository includes additional published-image cases developed after that archive.
 
 The optional small-pilot package under `pilot/` includes invitation text, a facilitator guide, a learner worksheet, anonymous feedback prompts, and a session-level results template. Running a pilot is not required for the technical report or archival release.
 
-The executable teaching notebook is `notebooks/01_educational_sensitivity_analysis.ipynb`. It compares analysis configurations panel by panel and deliberately omits treatment hypothesis tests and predictive modeling.
+The notebooks are:
+
+1. `01_educational_sensitivity_analysis.ipynb` — synthetic threshold and object-splitting sensitivity;
+2. `02_bbbc039_published_image_transfer.ipynb` — foreground agreement versus object agreement;
+3. `03_bbbc050_3d_projection_transfer.ipynb` — central-plane, mean, and maximum projections;
+4. `04_bbbc013_multichannel_roles.ipynb` — channel roles and perinuclear region definitions.
+
+They deliberately omit treatment hypothesis tests and predictive modelling.
 
 The notebook runs out of the box on deterministic synthetic teaching images. Thesis-derived panels are not required and remain excluded pending redistribution permission.
 
-Five published-image transfer exercises have been feasibility-audited in
+Additional published-image transfer exercises have been feasibility-audited in
 [`case_studies/`](case_studies/). They are framed as teaching cases, not as
 reproductions or biological validation, and no third-party images are bundled.
 The first executable transfer case is
@@ -54,6 +50,8 @@ data/raw_confocal_images/thesis_screenshots/fig34/
 ```
 
 The filenames must match the metadata file. Copy `metadata_fig34.csv` into the same directory before execution.
+
+The three public-data notebooks include opt-in download scripts. Downloaded third-party data remain under their source licenses and are excluded from version control.
 
 ## Installation
 
