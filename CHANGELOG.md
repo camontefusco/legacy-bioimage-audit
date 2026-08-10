@@ -9,3 +9,4 @@
 - Documented that the package is a historical reconstruction, not a validated biological pipeline.
 - Added a self-contained synthetic-data learning module and sensitivity analysis.
 - Added a JOSE-oriented paper skeleton, teaching-pilot template, CI, and public-release checklist.
+- Licensed software under MIT and original educational content and synthetic graphics under CC BY 4.0.

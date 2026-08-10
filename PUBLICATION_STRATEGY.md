@@ -14,7 +14,7 @@ JOSE is the strongest fit because the contribution is an open computational lear
 
 Before submission:
 
-1. Choose an OSI-approved code license and a compatible open license for text and graphics.
+1. Confirm that the selected MIT code license and CC BY 4.0 content license are compatible with contributor and institutional obligations.
 2. Complete a small teaching pilot, ideally with 3–5 learners or one workshop.
 3. Revise the module from observed completion times and points of confusion.
 4. Add installation checks or an environment lock file.
@@ -38,7 +38,7 @@ Do not submit this as a bacterial-segmentation benchmark, treatment-effect study
 Proceed to public release only if all are **yes**:
 
 - [ ] Contributors and affiliations are confirmed.
-- [ ] Code and educational-content licenses are approved by the relevant owners.
+- [x] MIT code and CC BY 4.0 educational-content licenses have been selected by the repository owner.
 - [ ] No thesis-derived or third-party image is included without permission.
 - [ ] A fresh install can run the notebook on the synthetic data.
 - [ ] Tests pass.

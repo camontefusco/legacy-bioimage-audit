@@ -11,7 +11,7 @@ authors = [
   {name = "Carlos Victor Montefusco-Pereira"}
 ]
 readme = "README.md"
-license = {text = "License pending; all rights reserved"}
+license = {text = "MIT"}
 classifiers = [
   "Development Status :: 2 - Pre-Alpha",
   "Programming Language :: Python :: 3",

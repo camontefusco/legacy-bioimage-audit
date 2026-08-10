@@ -15,7 +15,7 @@ The repository intentionally separates:
 
 See `ANALYSIS_BRANCHES.md` and `MANUSCRIPT_CODE_RECONCILIATION.md` before interpreting any output.
 
-Also read `DATA_PROVENANCE.md` for the exact data boundary and `LICENSE_PENDING.md` before copying or distributing the package.
+Also read `DATA_PROVENANCE.md` for the exact data boundary and the licensing section below before copying or distributing the package.
 
 For teaching use, start with `EDUCATIONAL_USE_GUIDE.md`. `CLAIM_BOUNDARY.md` defines the statements that the available evidence does and does not support.
 
@@ -71,4 +71,6 @@ This code can document what was done and help design a future validated study. I
 
 ## Licensing
 
-No license has yet been selected. This private release candidate is currently all rights reserved. Do not publish it until code licensing, image redistribution, contributor attribution, and data-use terms have been confirmed.
+Software code is licensed under the [MIT License](LICENSE). Original instructional prose, notebook narrative, documentation, and synthetic teaching graphics are licensed under [CC BY 4.0](LICENSE-CONTENT.md), except where otherwise noted.
+
+Thesis-derived images are not included and are not covered by either license. The licenses do not convert synthetic panels into biological evidence or relax the interpretation limits documented in `CLAIM_BOUNDARY.md`.

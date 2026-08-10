@@ -5,10 +5,10 @@
 - [ ] Confirm the repository owner and final name.
 - [ ] Confirm authors, contributors, affiliations, and acknowledgements.
 - [ ] Confirm ownership of the recovered code and institutional obligations.
-- [ ] Select an OSI-approved code license.
-- [ ] Select an open license for prose and educational graphics.
-- [ ] Replace `LICENSE_PENDING.md` with the approved license file or files.
-- [ ] Update `pyproject.toml` and `CITATION.cff` with the selected license.
+- [x] Select an OSI-approved code license: MIT.
+- [x] Select an open license for prose and educational graphics: CC BY 4.0.
+- [x] Replace `LICENSE_PENDING.md` with the approved license files.
+- [x] Update `pyproject.toml` and `CITATION.cff` with the selected license.
 - [ ] Add a private conduct-reporting email address or form.
 
 ## Technical checks
