@@ -11,14 +11,7 @@ scipy
 matplotlib
 seaborn
 
-# Statistical and exploratory modeling
-scikit-learn
-
 # Jupyter notebooks
 jupyter
 notebook
 ipykernel
-
-# Optional interactive image viewer
-napari
-pyqt5

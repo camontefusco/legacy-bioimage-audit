@@ -1,0 +1,3 @@
+# Optional desktop image viewer; not needed for the teaching notebook or tests.
+napari
+pyqt5

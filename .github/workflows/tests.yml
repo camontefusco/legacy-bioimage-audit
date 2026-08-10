@@ -4,17 +4,26 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
           cache: pip
-      - name: Install dependencies
-        run: pip install -r requirements.txt pytest
-      - name: Run tests
+      - name: Install
+        run: python -m pip install -e '.[test]'
+      - name: Test
         run: pytest
-
+      - name: Generate public teaching data
+        run: python scripts/generate_synthetic_panels.py
+      - name: Verify notebook can be constructed
+        run: python scripts/create_educational_sensitivity_notebook.py

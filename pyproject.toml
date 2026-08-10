@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jmm-host-pathogen-analysis-reconstruction"
+name = "legacy-bioimage-audit"
 version = "0.1.0.dev0"
-description = "Historical reconstruction of a host-pathogen microscopy analysis"
+description = "Educational module on provenance, sensitivity, and limits of inference in legacy bioimage analysis"
 requires-python = ">=3.10"
 authors = [
   {name = "Carlos Victor Montefusco-Pereira"}
@@ -18,7 +18,23 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Image Processing",
 ]
 
+dependencies = [
+  "numpy",
+  "pandas",
+  "pillow",
+  "scikit-image",
+  "scipy",
+  "matplotlib",
+  "seaborn",
+  "jupyter",
+  "notebook",
+  "ipykernel",
+]
+
+[project.optional-dependencies]
+viewer = ["napari", "pyqt5"]
+test = ["pytest"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
-

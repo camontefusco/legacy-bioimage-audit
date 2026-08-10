@@ -45,6 +45,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+The desktop viewer is optional and is not required for the notebook:
+
+```bash
+pip install -r requirements-optional.txt
+```
+
 ## Reconstruct the submitted branch
 
 ```bash
