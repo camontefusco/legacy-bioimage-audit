@@ -1,0 +1,13 @@
+image_id,file_name,panel,case_category,provenance,biological_interpretation_permitted
+synthetic_01,synthetic_panel_01.png,1,sparse,deterministic synthetic teaching image,no
+synthetic_02,synthetic_panel_02.png,2,dense,deterministic synthetic teaching image,no
+synthetic_03,synthetic_panel_03.png,3,large_regions,deterministic synthetic teaching image,no
+synthetic_04,synthetic_panel_04.png,4,gradient_background,deterministic synthetic teaching image,no
+synthetic_05,synthetic_panel_05.png,5,sparse,deterministic synthetic teaching image,no
+synthetic_06,synthetic_panel_06.png,6,dense,deterministic synthetic teaching image,no
+synthetic_07,synthetic_panel_07.png,7,large_regions,deterministic synthetic teaching image,no
+synthetic_08,synthetic_panel_08.png,8,gradient_background,deterministic synthetic teaching image,no
+synthetic_09,synthetic_panel_09.png,9,sparse,deterministic synthetic teaching image,no
+synthetic_10,synthetic_panel_10.png,10,dense,deterministic synthetic teaching image,no
+synthetic_11,synthetic_panel_11.png,11,large_regions,deterministic synthetic teaching image,no
+synthetic_12,synthetic_panel_12.png,12,gradient_background,deterministic synthetic teaching image,no

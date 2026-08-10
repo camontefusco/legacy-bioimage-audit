@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository is a small-data teaching resource for bioimage-analysis provenance, sensitivity, and study design. It uses 12 selected, rendered thesis panels to demonstrate how an analysis can be reconstructed, audited, challenged, and redesigned.
+This repository is a small-data teaching resource for bioimage-analysis provenance, sensitivity, and study design. Its public exercise uses 12 deterministic synthetic panels. The thesis panels are optional historical material and must not be distributed without permission.
 
 It is not a biological treatment-effect dataset, a segmentation benchmark, or a validated clinical or microbiological method.
 
@@ -26,7 +26,7 @@ After working through the material, a learner should be able to:
 7. Design a data manifest and validation plan before analysing a larger dataset.
 8. Recognize when an analysis should stop because calibration, controls, or replication are missing.
 
-## What the 12 panels may be used for
+## What the 12 synthetic panels may be used for
 
 - Demonstrating image loading, channel extraction, filtering, thresholding, morphology, labeling, and region measurements.
 - Reconstructing historical outputs.
@@ -104,9 +104,9 @@ Avoid:
 
 ## Upgrade path when more data become available
 
-### Stage 0 — Current educational dataset
+### Stage 0 — Current public educational dataset
 
-Twelve rendered, selected panels. Use only for code reconstruction, sensitivity, and study-design instruction.
+Twelve synthetic fluorescence-like panels. Use only for method sensitivity, quality-control, and study-design instruction. They carry no biological meaning.
 
 ### Stage 1 — Additional unlabelled exports
 
@@ -134,4 +134,3 @@ The safest current outputs are:
 - a short perspective or technical note about analytical provenance, provided the venue accepts case-based educational work.
 
 The repository should not be marketed as a new bacterial segmentation method or as evidence of a biological phenotype.
-

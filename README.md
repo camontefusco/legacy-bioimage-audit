@@ -19,6 +19,12 @@ Also read `DATA_PROVENANCE.md` for the exact data boundary and `LICENSE_PENDING.
 
 For teaching use, start with `EDUCATIONAL_USE_GUIDE.md`. `CLAIM_BOUNDARY.md` defines the statements that the available evidence does and does not support.
 
+`PUBLICATION_STRATEGY.md` gives the release and journal-submission route. `paper.md` is a JOSE-oriented manuscript skeleton; it deliberately identifies the missing teaching pilot instead of claiming educational effectiveness prematurely.
+
+The executable teaching notebook is `notebooks/01_educational_sensitivity_analysis.ipynb`. It compares analysis configurations panel by panel and deliberately omits treatment hypothesis tests and predictive modeling.
+
+The notebook runs out of the box on deterministic synthetic teaching images. Thesis-derived panels are not required and remain excluded pending redistribution permission.
+
 ## Data
 
 The 12 thesis-derived screenshots are deliberately excluded from this release candidate pending confirmation that they may be redistributed. Their metadata are provided in `data/metadata/metadata_fig34.csv`.
