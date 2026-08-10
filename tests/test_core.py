@@ -4,12 +4,14 @@ from pathlib import Path
 import sys
 
 import numpy as np
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from scripts.run_submission_reconstruction import segment_submission_branch
 from src.metrics import summarize_objects
+from src.segmentation import decode_color_instance_mask, load_grayscale_image
 
 
 def test_metadata_describes_twelve_panels() -> None:
@@ -45,3 +47,39 @@ def test_summary_geometry_is_internally_consistent() -> None:
     assert summary["positive_area_px"] == 65
     assert summary["positive_area_fraction"] == 65 / 400
     assert summary["total_positive_intensity"] == 65
+
+
+def test_load_grayscale_image_preserves_16_bit_values(tmp_path) -> None:
+    source = np.array([[0, 256], [4096, 65535]], dtype=np.uint16)
+    path = tmp_path / "single_channel.tif"
+    Image.fromarray(source).save(path)
+
+    loaded = load_grayscale_image(path)
+
+    assert loaded.dtype == np.uint16
+    assert np.array_equal(loaded, source)
+
+
+def test_load_grayscale_image_rejects_multichannel_input(tmp_path) -> None:
+    path = tmp_path / "rgb.png"
+    Image.fromarray(np.zeros((3, 4, 3), dtype=np.uint8)).save(path)
+
+    try:
+        load_grayscale_image(path)
+    except ValueError as exc:
+        assert "Select a channel" in str(exc)
+    else:
+        raise AssertionError("Expected multichannel input to be rejected")
+
+
+def test_decode_color_instance_mask_labels_connected_foreground() -> None:
+    mask = np.zeros((3, 4, 3), dtype=np.uint8)
+    mask[0, :2] = [255, 0, 0]
+    mask[2, 2:] = [2, 0, 0]
+
+    labels = decode_color_instance_mask(mask)
+
+    assert labels[1, 1] == 0
+    assert labels[0, 0] > 0
+    assert labels[2, 3] > 0
+    assert labels[0, 0] != labels[2, 3]

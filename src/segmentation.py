@@ -57,6 +57,47 @@ def load_image(path: str | Path) -> np.ndarray:
     return np.asarray(image)
 
 
+def load_grayscale_image(path: str | Path) -> np.ndarray:
+    """Load a 2D PNG or TIFF without forcing it to 8-bit RGB.
+
+    The stored integer bit depth is preserved. Multichannel, z-stack,
+    time-series, and proprietary microscopy files require an explicit adapter
+    rather than silent flattening.
+    """
+
+    path = Path(path)
+    if not path.exists():
+        raise FileNotFoundError(f"Image not found: {path}")
+
+    image = np.asarray(Image.open(path))
+    if image.ndim != 2:
+        raise ValueError(
+            "Expected a 2D single-channel image. "
+            f"Received shape {image.shape} from {path}. "
+            "Select a channel, z-plane, or timepoint explicitly before analysis."
+        )
+    return image
+
+
+def decode_color_instance_mask(mask: np.ndarray) -> np.ndarray:
+    """Decode a BBBC039 RGBA mask into connected reference instances.
+
+    Following the dataset author's decoding example, the first channel is
+    converted to foreground and independent connected components are labelled.
+    The resulting objects are derived from the published annotation; this
+    function does not infer or repair missing annotations.
+    """
+
+    if mask.ndim != 3 or mask.shape[2] not in (3, 4):
+        raise ValueError(
+            "Expected an RGB or RGBA color-coded mask with shape (y, x, 3/4). "
+            f"Received shape: {mask.shape}"
+        )
+
+    foreground = np.asarray(mask[..., 0]) > 0
+    return measure.label(foreground)
+
+
 def extract_channel(image: np.ndarray, channel: ChannelName = "green") -> np.ndarray:
     """
     Extract one fluorescence channel from an RGB image.

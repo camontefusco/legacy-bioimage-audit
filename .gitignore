@@ -7,6 +7,7 @@ __pycache__/
 .venv/
 venv/
 data/raw_confocal_images/
+data/external/
 results/regenerated_submission/
 results/figures/
 results/educational_sensitivity/

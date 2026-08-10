@@ -2,6 +2,11 @@
 
 Run `python scripts/generate_synthetic_panels.py` to create 12 deterministic, redistributable fluorescence-like teaching images under `data/synthetic_panels/`. They teach image-analysis mechanics and have no biological interpretation. The educational notebook creates them automatically when needed.
 
+Published-image transfer exercises are scoped in
+`case_studies/case_study_manifest.csv`. Third-party images are deliberately not
+bundled with this repository; the manifest records authoritative sources,
+licenses, scale, and required adapters.
+
 ## Restricted historical inputs
 
 `metadata/metadata_fig34.csv` describes the 12 Figure 34 panels used in the historical analysis.

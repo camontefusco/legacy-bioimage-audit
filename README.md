@@ -33,6 +33,12 @@ The executable teaching notebook is `notebooks/01_educational_sensitivity_analys
 
 The notebook runs out of the box on deterministic synthetic teaching images. Thesis-derived panels are not required and remain excluded pending redistribution permission.
 
+Five published-image transfer exercises have been feasibility-audited in
+[`case_studies/`](case_studies/). They are framed as teaching cases, not as
+reproductions or biological validation, and no third-party images are bundled.
+The first executable transfer case is
+[`notebooks/02_bbbc039_published_image_transfer.ipynb`](notebooks/02_bbbc039_published_image_transfer.ipynb).
+
 ## Data
 
 The 12 thesis-derived screenshots are deliberately excluded from this release candidate pending confirmation that they may be redistributed. Their metadata are provided in `data/metadata/metadata_fig34.csv`.
