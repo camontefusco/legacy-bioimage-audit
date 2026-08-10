@@ -1,11 +1,11 @@
 ---
-title: 'When raw microscopy data are gone: a responsible workflow for auditing legacy bioimage analyses'
+title: 'From qualitative observations to quantitative data: a transition guide for experimental scientists'
 tags:
+  - data science
   - bioimage analysis
+  - quantitative microscopy
   - reproducibility
-  - research integrity
-  - image segmentation
-  - legacy data
+  - experimental design
 authors:
   - name: Carlos Victor Montefusco-Pereira
 date: 2026-08-10
@@ -14,89 +14,107 @@ bibliography: paper.bib
 
 # Abstract
 
-Legacy bioimage-analysis projects sometimes survive only as rendered figures, partial metadata, divergent scripts, and reported measurements. Re-executing recovered code can establish computational provenance, but it cannot recreate raw acquisitions, independent biological replication, calibration, controls, or segmentation ground truth. This technical tutorial presents a conservative workflow for auditing such projects. It separates historical reconstruction from validation, uses deterministic synthetic fluorescence-like panels to demonstrate parameter sensitivity, and defines stopping rules that prevent descriptive image behavior from becoming unsupported biological inference. The accompanying open repository contains code, tests, synthetic examples, provenance records, and claim boundaries. It is a worked framework for research recovery and training, not a validated biological method.
+Experimental scientists routinely recognize meaningful visual patterns before those patterns have formal numerical definitions. Moving from “this sample looks more clustered” to a defensible dataset requires more than learning Python: the analyst must define the construct, operationalize it as a measurement, preserve the experimental hierarchy, validate extraction, and restrict conclusions to what the data support. This transition guide presents a practical workflow for converting qualitative microscopy observations into reproducible quantitative information. A companion notebook uses deterministic synthetic fluorescence-like panels to demonstrate how preprocessing and segmentation choices alter masks and derived measurements. A legacy-analysis case illustrates what remains possible when raw data or labels are lost. The resource teaches measurement reasoning and computational traceability; it is not a validated segmentation method or a source of biological treatment-effect evidence.
 
-# The recovery problem
+# The difficult part is defining the measurement
 
-Quantitative microscopy depends on acquisition settings, preprocessing choices, metadata, and the relationship between images and experimental units [@jonkman2020]. When only a figure panel remains, pixel values may already reflect cropping, contrast adjustment, compositing, rescaling, compression, or annotation. The panel can still document what a particular program does to that rendered input, but it is not interchangeable with the original microscopy data.
+Students moving from experimental work into data science often begin with strong domain perception. They can distinguish sparse from dense signal, dispersed from clustered patterns, or expected from unusual morphology. The challenge is that such observations mix description, interpretation, and mechanism.
 
-Three questions must therefore remain separate:
+Consider the statement “the treated image looks more clustered.” At least four questions are hidden inside it:
 
-1. **Provenance:** Which code and parameters produced a reported value?
-2. **Analytical behavior:** How sensitive are masks and derived measurements to reasonable choices?
-3. **Scientific validity:** Do the measurements accurately represent a biological quantity and support inference across independent experiments?
+1. What visual property is being called clustering?
+2. Which numerical quantity will represent that property?
+3. At what experimental level will values be compared?
+4. What evidence would support a treatment interpretation rather than a technical explanation?
 
-Exact recovery of the first does not establish the third. This distinction is consistent with broader reproducibility guidance: rerunning an analysis is valuable, but reproducibility alone does not establish inferential validity [@munafò2017manifesto].
+Quantitative microscopy depends on acquisition, processing, metadata, and the relationship between images and experimental units [@jonkman2020]. Writing code before answering these questions can make an ambiguous concept reproducible without making it valid.
 
-# A responsible audit workflow
+# A workflow from observation to dataset
 
-## 1. Inventory evidence before analysing
+## 1. Separate description from interpretation
 
-Record every surviving artifact: manuscripts, figure captions, screenshots, tables, notebooks, scripts, environments, emails, and file manifests. Classify each fact as directly documented, inferred, unknown, or irrecoverable. Search for original acquisitions and sample mappings, but record the search boundary and negative result rather than describing missing files as recovered data.
+Begin with a mechanism-neutral statement: “bright regions appear larger,” “signal covers more of the field,” or “objects appear less dispersed.” Then list possible explanations, including illumination, focus, exposure, background, cropping, segmentation, staining, or sampling. This prevents the proposed biological mechanism from becoming the measurement definition.
 
-## 2. Reconstruct code branches separately
+## 2. Define the construct
 
-Legacy projects often contain a submitted branch, a later rewrite, and fragments that combine both. Preserve each branch and compare parameters, algorithms, and outputs. A manuscript may describe Otsu thresholding and watershed segmentation while submitted numbers originate from percentile thresholding and connected components. The audit should report the mismatch rather than silently selecting the branch that best supports the narrative.
+The construct is the property the analysis intends to represent: coverage, abundance, intensity, size, shape, spatial dispersion, or co-localization. Each construct needs an explicit link to the scientific question. Fluorescence intensity, for example, may reflect abundance, reporter expression, exposure, bleaching, detector response, or background. It should not be called “cell number” without evidence connecting the two.
 
-## 3. Reproduce numbers without rehabilitating claims
+## 3. Operationalize the construct
 
-An exact match between recovered code and an archived table demonstrates numerical lineage. It does not show that the input was appropriate, that the mask was accurate, or that image fields were independent replicates. Reconstruction results should therefore be labeled historical or descriptive.
+An operational definition turns the construct into a repeatable calculation:
 
-## 4. Test analytical sensitivity
+- coverage as foreground pixels divided by analysable pixels;
+- brightness as background-corrected intensity inside a defined region;
+- object size as the area of a connected segmented region;
+- shape as a specified descriptor such as solidity or eccentricity; or
+- spatial organization as a pre-selected spatial statistic.
 
-The accompanying notebook uses open scientific Python tools, including scikit-image [@vanderwalt2014], to compare plausible preprocessing, thresholding, morphology, and minimum-object-size choices. It reports foreground area, object count, object-size summaries, and mask intersection-over-union. These comparisons reveal whether conclusions depend heavily on configuration.
+The definition must include units, preprocessing, thresholds, exclusions, aggregation, and how failed images are handled. Open tools such as scikit-image make implementation accessible [@vanderwalt2014], but software defaults do not substitute for scientific justification.
 
-Mask overlap is deliberately described as **agreement**, not accuracy. Without blinded expert annotations or another defensible reference, two masks may agree while both are biologically wrong.
+## 4. Preserve experimental hierarchy
 
-## 5. Audit the experimental unit
+A useful data model retains the nesting:
 
-The intended hierarchy may be experiment → well or sample → field → segmented object. A rendered montage panel does not restore that hierarchy. Objects within one image and multiple fields from one well cannot automatically replace independent experiments. When sample mapping is missing, the safest unit of description is the individual surviving panel.
+`experiment → biological sample → well/specimen → field/image → object`
 
-## 6. Apply a stopping rule
+Objects within an image and fields within one sample are generally technical observations. Treating them as independent biological replicates inflates apparent sample size and changes the question being answered. The independent experimental unit should be defined before hypothesis testing, and lower-level measurements should be aggregated or modeled according to the study design.
 
-Stop before treatment hypothesis tests, predictive modeling, or biological-performance claims when one or more of the following are unavailable:
+## 5. Build linked data layers
 
-- raw or suitably documented source images;
-- mapping from images to independent experiments and samples;
-- acquisition metadata and calibration required by the measurement;
-- appropriate controls;
-- ground-truth annotations for accuracy claims; or
-- sufficient independent replication for the proposed inference.
+A robust workflow produces at least three related tables:
 
-Stopping is a positive analytical result: it identifies exactly what evidence is required next.
+1. a **manifest** connecting files to samples, conditions, replicates, and acquisition metadata;
+2. an **object table** containing measurements and identifiers for each detected region; and
+3. a **sample-level table** containing pre-specified summaries at the independent-unit level.
 
-# Why synthetic panels are used
+This structure lets an analyst trace a plotted value back to an object, image, sample, file, and analysis configuration. Filenames alone are not a sufficient data model.
 
-The public exercise contains 12 deterministic fluorescence-like panels with varied density, object size, and background structure. They make the code immediately executable without redistributing thesis-derived material. They also prevent experimental labels from inviting accidental biological interpretation.
+## 6. Validate extraction before comparing groups
 
-Synthetic examples can demonstrate software behavior, edge cases, and sensitivity. They cannot validate performance on bacteria, microscopy instruments, host cells, or treatment conditions. The repository states this boundary in the data documentation, notebook, and claim guide.
+Quality control should include source images, masks, labeled objects, overlays, excluded cases, and parameter-sensitivity views. Controls depend on the measurement and may include negative or positive samples, single-channel controls, calibration standards, repeated acquisitions, or blinded expert annotations.
 
-# Outputs of an audit
+The companion notebook compares reasonable preprocessing and segmentation configurations on synthetic panels. It reports foreground area, object count, size summaries, and intersection-over-union. Intersection-over-union measures agreement between masks, not accuracy, unless an appropriate reference annotation exists.
 
-A useful legacy-analysis audit should produce:
+## 7. Match analysis and claims to evidence
 
-- an artifact and provenance inventory;
-- a code-branch reconciliation;
-- reproducible reference outputs;
-- parameter-sensitivity and quality-control views;
-- an experimental-unit diagram;
-- a list of supported and prohibited claims; and
-- a prospective manifest for any future data collection.
+Only after the measurement process and experimental unit are defensible should group comparisons or models begin. A reproducible result is not automatically a valid biological result [@munafò2017manifesto]. If calibration, controls, ground truth, sample mapping, or independent replication are missing, the output should remain descriptive and the missing evidence should become a requirement for the next experiment.
 
-These outputs can preserve methodological history, teach responsible analysis, and guide a new study even when the original biological question can no longer be answered.
+# A worked sensitivity demonstration
+
+The repository supplies 12 deterministic synthetic fluorescence-like panels representing sparse signal, dense signal, large regions, and background gradients. Their purpose is to make measurement construction visible. Learners can observe that changing smoothing, background subtraction, thresholding, morphology, or minimum object size alters both the binary mask and the quantities derived from it.
+
+The panels have no biological labels or treatment meaning. They cannot validate bacterial segmentation, microscopy performance, or biological conclusions. This restriction is a feature of the exercise: it forces attention onto how a qualitative appearance becomes a computational variable.
+
+# The legacy-data boundary
+
+The project originated from an attempt to reconstruct an analysis when original microscopy acquisitions and reliable labels were unavailable. That case now serves as a boundary example. Rendered panels can support code recovery, provenance documentation, and sensitivity analysis, but they cannot recreate acquisition metadata, physical calibration, sample identity, independent replication, or segmentation ground truth.
+
+When qualitative material cannot support the intended inference, the analyst should stop rather than manufacture certainty. The useful outputs are then an evidence inventory, reconstructed code lineage, claim boundary, and prospective plan for better data collection.
+
+# A transition canvas for students
+
+Before coding, students should complete a one-page specification containing:
+
+- qualitative observation and alternative explanations;
+- proposed construct and operational definition;
+- measurement and physical units;
+- independent experimental unit and nested technical observations;
+- required manifest fields and controls;
+- QC visualization and sensitivity analysis;
+- aggregation rule;
+- supported and unsupported claims; and
+- an explicit stop/go decision.
+
+This changes the role of code. Instead of searching for any number that separates conditions, the student implements a documented measurement whose meaning, limitations, and provenance are visible.
 
 # Limitations
 
-This report is based on one recovery case and a synthetic demonstration. It does not estimate how often manuscripts and code diverge, assess learner outcomes, benchmark segmentation algorithms, or establish a new biological method. The synthetic panels are not intended to resemble a validated microscopy distribution. The framework should be adapted to the acquisition modality, biological hierarchy, and governance requirements of each project.
+This is a transition guide and worked computational demonstration, not an evaluation of student outcomes, a segmentation benchmark, or a validated biological method. The synthetic panels are not designed to reproduce a particular microscopy distribution. Constructs and controls must be adapted to the instrument, modality, sample, and scientific question.
 
 # Availability, licensing, and AI assistance
 
 The repository is available at <https://github.com/camontefusco/legacy-bioimage-audit>. Software is licensed under MIT. Original instructional prose and synthetic graphics are licensed under CC BY 4.0. Thesis-derived images are excluded.
 
-AI-assisted tools were used to help recover and compare project artifacts, draft code and documentation, and edit this report. The author reviewed the repository, executed the tests and notebooks, checked claim boundaries, and remains responsible for the content. The limitations of the surviving evidence, including contradictions between manuscript language and recovered code, are reported rather than resolved by assumption.
-
-# Acknowledgements
-
-The historical microscopy work originated during doctoral research. Acknowledgements for the present technical report will be finalized before archival release and will distinguish historical scientific contributions from authorship of the current software and report.
+AI-assisted tools were used in artifact recovery, code and documentation drafting, and language editing. The author reviewed the materials, ran the tests and notebook, and remains responsible for the content and stated evidence boundaries.
 
 # References

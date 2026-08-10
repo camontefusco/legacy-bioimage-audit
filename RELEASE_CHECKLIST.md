@@ -24,7 +24,7 @@
 
 ## Archival publication checks
 
-- [x] Pivot `paper.md` to a technical report that does not claim educational effectiveness.
+- [x] Pivot `paper.md` to a transition guide from qualitative experimental observation to quantitative data.
 - [x] Prepare a data-minimizing 3–5 learner pilot package under `pilot/`.
 - [ ] Confirm acknowledgements and optional current affiliation.
 - [ ] Complete final citation and public-file audit.

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this technical tutorial or software, cite the archived release associated with the repository record."
-title: "When raw microscopy data are gone: a responsible workflow for auditing legacy bioimage analyses"
+title: "From qualitative observations to quantitative data: a transition guide for experimental scientists"
 type: software
 authors:
   - family-names: "Montefusco-Pereira"
@@ -9,14 +9,14 @@ version: "0.1.0-dev"
 date-released: "2026-08-01"
 repository-code: "https://github.com/camontefusco/legacy-bioimage-audit"
 abstract: >-
-  Technical tutorial and historical reconstruction for auditing legacy
-  bioimage analyses when raw acquisitions or labels are unavailable. The
-  package demonstrates provenance, sensitivity, quality control, experimental
-  units, and responsible stopping rules. It is not a validated biological
-  treatment-effect pipeline.
+  Transition guide and computational demonstration for experimental scientists
+  learning to convert qualitative microscopy observations into operational
+  measurements, structured datasets, quality control, and defensible claims.
+  A legacy-analysis reconstruction is retained as a cautionary case.
 keywords:
   - bioimage analysis
+  - data science education
+  - quantitative microscopy
   - reproducibility
-  - Pseudomonas aeruginosa
   - microscopy
 license: MIT

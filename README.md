@@ -1,6 +1,6 @@
-# Auditing legacy bioimage analyses
+# From qualitative observations to quantitative data
 
-This repository is an educational module on provenance, parameter sensitivity, and limits of inference in legacy bioimage analysis. Its historical case reconstructs the image-analysis branch used to generate numerical results for manuscript JMM `MIMET-D-26-00638`, while its public exercise runs entirely on deterministic synthetic panels.
+This repository helps experimental students and researchers translate qualitative microscopy observations into defensible quantitative variables, structured datasets, quality-control procedures, and appropriately limited claims. Its public exercise runs entirely on deterministic synthetic panels. A recovered legacy analysis is retained as a cautionary provenance case.
 
 ## Status
 
@@ -17,9 +17,9 @@ See `ANALYSIS_BRANCHES.md` and `MANUSCRIPT_CODE_RECONCILIATION.md` before interp
 
 Also read `DATA_PROVENANCE.md` for the exact data boundary and the licensing section below before copying or distributing the package.
 
-For teaching use, start with `EDUCATIONAL_USE_GUIDE.md`. `CLAIM_BOUNDARY.md` defines the statements that the available evidence does and does not support.
+Start with `EXPERIMENTAL_TO_DATA_SCIENCE_GUIDE.md`, then use the executable notebook. `EDUCATIONAL_USE_GUIDE.md` provides the longer module sequence, and `CLAIM_BOUNDARY.md` defines statements the historical evidence does and does not support.
 
-`PUBLICATION_STRATEGY.md` gives the release route. `paper.md` is a technical tutorial/report on auditing legacy bioimage analyses when raw data are unavailable; it makes no claim of educational effectiveness.
+`PUBLICATION_STRATEGY.md` gives the release route. `paper.md` is a transition guide from qualitative experimental observation to quantitative analysis; it makes no claim of educational effectiveness.
 
 The optional small-pilot package under `pilot/` includes invitation text, a facilitator guide, a learner worksheet, anonymous feedback prompts, and a session-level results template. Running a pilot is not required for the technical report or archival release.
 

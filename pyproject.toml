@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "legacy-bioimage-audit"
 version = "0.1.0.dev0"
-description = "Educational module on provenance, sensitivity, and limits of inference in legacy bioimage analysis"
+description = "Transition guide from qualitative experimental observations to quantitative bioimage data"
 requires-python = ">=3.10"
 authors = [
   {name = "Carlos Victor Montefusco-Pereira"}

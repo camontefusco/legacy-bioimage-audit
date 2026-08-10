@@ -2,7 +2,7 @@
 
 ## Current route: technical report and software release
 
-The immediate output is a versioned GitHub release archived in Zenodo with a DOI. The accompanying report, `paper.md`, is a self-contained technical tutorial on responsible legacy bioimage-analysis auditing. It makes no claim of educational effectiveness and does not require a teaching cohort.
+The immediate output is a versioned GitHub release archived in Zenodo with a DOI. The accompanying report, `paper.md`, is a self-contained transition guide for experimental scientists converting qualitative observations into quantitative data. It makes no claim of educational effectiveness and does not require a teaching cohort.
 
 Before archival release:
 
@@ -13,7 +13,7 @@ Before archival release:
 
 ## Possible later journal route
 
-An expanded, literature-grounded **Opinion Article** may be considered for F1000Research if publication charges and scope are acceptable. The paper would argue for explicit stopping rules and claim boundaries when raw bioimage data are lost. It should not present the synthetic demonstration as new biological research.
+An expanded, literature-grounded **Opinion Article** may be considered for F1000Research if publication charges and scope are acceptable. The paper would argue that measurement definition, experimental hierarchy, and validation—not software alone—are the core of an experimental scientist's transition into data science. It should not present the synthetic demonstration as new biological research.
 
 ## Routes not recommended now
 

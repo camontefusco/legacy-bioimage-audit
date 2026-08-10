@@ -2,13 +2,14 @@
 
 ## Purpose
 
-This repository is a small-data teaching resource for bioimage-analysis provenance, sensitivity, and study design. Its public exercise uses 12 deterministic synthetic panels. The thesis panels are optional historical material and must not be distributed without permission.
+This repository is a transition resource for experimental scientists learning to turn qualitative microscopy observations into quantitative measurements and analysis-ready data. Its public exercise uses 12 deterministic synthetic panels. The thesis case is optional historical material and must not be distributed without permission.
 
 It is not a biological treatment-effect dataset, a segmentation benchmark, or a validated clinical or microbiological method.
 
 ## Intended learners
 
-- Students beginning Python-based bioimage analysis.
+- Experimental students beginning Python-based image analysis or data science.
+- Researchers who have qualitative observations but need operational definitions and structured measurement tables.
 - Researchers inheriting legacy microscopy figures without complete raw data.
 - Analysts learning to distinguish technical fields, samples, wells, and biological replicates.
 - Authors preparing code and data for reproducible publication.
@@ -17,14 +18,14 @@ It is not a biological treatment-effect dataset, a segmentation benchmark, or a 
 
 After working through the material, a learner should be able to:
 
-1. Trace a reported number back to the exact code branch that generated it.
-2. Distinguish preprocessing, segmentation, object measurement, and statistical inference.
-3. Explain why rendered figure panels are not equivalent to raw microscopy data.
-4. Identify pseudoreplication and define the correct experimental unit.
-5. Compare how reasonable analysis choices change masks and derived measurements.
-6. Separate descriptive observations from biological conclusions.
-7. Design a data manifest and validation plan before analysing a larger dataset.
-8. Recognize when an analysis should stop because calibration, controls, or replication are missing.
+1. Separate visual description, scientific interpretation, and proposed mechanism.
+2. Translate a qualitative construct into an operational measurement.
+3. Distinguish preprocessing, segmentation, measurement, aggregation, and inference.
+4. Create linked manifest, object-level, and sample-level tables.
+5. Identify pseudoreplication and define the correct experimental unit.
+6. Compare how reasonable analysis choices change masks and derived measurements.
+7. Design controls and a validation plan before group comparison.
+8. Recognize when an analysis should stop because calibration, controls, ground truth, or replication are missing.
 
 ## What the 12 synthetic panels may be used for
 
@@ -47,17 +48,17 @@ After working through the material, a learner should be able to:
 
 ## Suggested teaching sequence
 
-### Module 1 — Data provenance
+### Module 1 — Observation and construct
 
-Inspect the metadata and reconstruct where each panel came from. Identify which information is known, inferred, unknown, or irrecoverable.
+Write mechanism-neutral observations about the panels. Choose one construct—such as coverage, size, shape, or dispersion—and list alternative explanations for its appearance.
 
-Deliverable: a provenance table and a list of prohibited claims.
+Deliverable: a completed observation-to-measurement canvas.
 
-### Module 2 — Historical reconstruction
+### Module 2 — Operational definition and data model
 
-Run the submitted percentile/connected-component branch. Compare regenerated values with the archived reference metrics.
+Define the processing, segmentation, measurement, and aggregation rules. Draw the experimental hierarchy and design manifest, object, and sample tables.
 
-Deliverable: a reproducibility report explaining exact matches and any version-dependent differences.
+Deliverable: a measurement specification and table schema.
 
 ### Module 3 — Analysis-choice sensitivity
 
@@ -71,7 +72,7 @@ Review raw rendered panels, masks, label maps, overlays, and failure cases. Reco
 
 Deliverable: a structured QC sheet. Do not label a mask “correct” without external ground truth.
 
-### Module 5 — Statistical-unit audit
+### Module 5 — Experimental-unit audit
 
 Draw the intended hierarchy: experiment → well/sample → field → object. Compare it with the available hierarchy: selected montage panel → segmented region.
 
@@ -82,6 +83,10 @@ Deliverable: a short explanation of why object counts and fields cannot replace 
 Use the manifest template to specify the raw files, controls, annotations, sample mapping, and acquisition metadata needed for a validated study.
 
 Deliverable: a preregistered analysis outline and go/no-go criteria.
+
+### Optional case — Legacy reconstruction
+
+Inspect the recovered historical branches and trace how one reported number arose. Use the mismatch between code and manuscript language to discuss why computational reproducibility, measurement validity, and biological inference are different questions.
 
 ## Responsible language
 
