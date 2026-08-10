@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: "Montefusco-Pereira"
     given-names: "Carlos Victor"
-version: "0.1.0-dev"
-date-released: "2026-08-01"
+version: "0.1.0"
+date-released: "2026-08-10"
 repository-code: "https://github.com/camontefusco/legacy-bioimage-audit"
 abstract: >-
   Transition guide and computational demonstration for experimental scientists
