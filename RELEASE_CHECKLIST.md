@@ -2,7 +2,7 @@
 
 ## Required decisions
 
-- [ ] Confirm the repository owner and final name.
+- [x] Confirm the repository owner and final name: `camontefusco/legacy-bioimage-audit`.
 - [ ] Confirm authors, contributors, affiliations, and acknowledgements.
 - [ ] Confirm ownership of the recovered code and institutional obligations.
 - [x] Select an OSI-approved code license: MIT.

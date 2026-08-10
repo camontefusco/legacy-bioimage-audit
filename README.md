@@ -1,6 +1,6 @@
-# Host–pathogen microscopy analysis: submission reconstruction
+# Auditing legacy bioimage analyses
 
-This repository candidate reconstructs the image-analysis branch used to generate numerical results for the manuscript submitted as JMM `MIMET-D-26-00638`. Its intended future use is as a historical reconstruction and educational case study based on 12 rendered thesis panels.
+This repository is an educational module on provenance, parameter sensitivity, and limits of inference in legacy bioimage analysis. Its historical case reconstructs the image-analysis branch used to generate numerical results for manuscript JMM `MIMET-D-26-00638`, while its public exercise runs entirely on deterministic synthetic panels.
 
 ## Status
 
