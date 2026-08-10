@@ -1,5 +1,7 @@
 # From qualitative observations to quantitative data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21876822.svg)](https://doi.org/10.5281/zenodo.21876822)
+
 This repository helps experimental students and researchers translate qualitative microscopy observations into defensible quantitative variables, structured datasets, quality-control procedures, and appropriately limited claims. Its public exercise runs entirely on deterministic synthetic panels. A recovered legacy analysis is retained as a cautionary provenance case.
 
 ## Status
@@ -22,6 +24,8 @@ Start with `EXPERIMENTAL_TO_DATA_SCIENCE_GUIDE.md`, then use the executable note
 `PUBLICATION_STRATEGY.md` gives the release route. `paper.md` is a transition guide from qualitative experimental observation to quantitative analysis; it makes no claim of educational effectiveness.
 
 The citation-resolved archival report is available at `output/pdf/qualitative-to-quantitative-transition-guide.pdf`. Rebuild and QA instructions are in `REPORT_BUILD.md`.
+
+The immutable `v0.1.0` software and report archive is available from [Zenodo](https://doi.org/10.5281/zenodo.21876822).
 
 The optional small-pilot package under `pilot/` includes invitation text, a facilitator guide, a learner worksheet, anonymous feedback prompts, and a session-level results template. Running a pilot is not required for the technical report or archival release.
 

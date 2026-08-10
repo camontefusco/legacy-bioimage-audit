@@ -28,6 +28,6 @@
 - [x] Prepare a data-minimizing 3–5 learner pilot package under `pilot/`.
 - [x] Keep current affiliation optional and omit unconfirmed acknowledgements from v0.1.0.
 - [x] Complete final citation, credential, personal-path, and public-file audit.
-- [ ] Create a tagged GitHub release.
-- [ ] Archive the release in Zenodo and add the DOI to `CITATION.cff`.
-- [ ] Publish the technical report with the archived release.
+- [x] Create tagged GitHub release `v0.1.0`.
+- [x] Archive the release in Zenodo as DOI `10.5281/zenodo.21876822` and add it to `CITATION.cff`.
+- [x] Publish the visually verified transition-guide PDF with the archived release.
