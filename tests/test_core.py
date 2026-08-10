@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.run_submission_reconstruction import segment_submission_branch
 from src.metrics import summarize_objects
+from src.multichannel import nuclear_perinuclear_summary
 from src.segmentation import (
     decode_color_instance_mask,
     load_grayscale_image,
@@ -104,3 +105,16 @@ def test_load_and_project_3d_tiff_stack(tmp_path) -> None:
     assert np.array_equal(project_stack(loaded, "central"), source[1])
     assert np.array_equal(project_stack(loaded, "maximum"), source.max(axis=0))
     assert np.allclose(project_stack(loaded, "mean"), source.mean(axis=0))
+
+
+def test_nuclear_perinuclear_summary_uses_separate_channel_roles() -> None:
+    signal = np.ones((9, 9), dtype=float)
+    labels = np.zeros((9, 9), dtype=int)
+    labels[3:6, 3:6] = 1
+    signal[labels > 0] = 4.0
+
+    summary = nuclear_perinuclear_summary(signal, labels, ring_radius=1)
+
+    assert summary["nuclear_mean_signal"] == 4.0
+    assert summary["perinuclear_mean_signal"] == 1.0
+    assert summary["nuclear_to_perinuclear_ratio"] == 4.0

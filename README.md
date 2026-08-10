@@ -40,6 +40,8 @@ The first executable transfer case is
 [`notebooks/02_bbbc039_published_image_transfer.ipynb`](notebooks/02_bbbc039_published_image_transfer.ipynb).
 The second is a 3D-to-2D operationalization exercise using CC BY 3.0 BBBC050:
 [`notebooks/03_bbbc050_3d_projection_transfer.ipynb`](notebooks/03_bbbc050_3d_projection_transfer.ipynb).
+The third uses paired GFP and DNA channels from CC BY 3.0 BBBC013:
+[`notebooks/04_bbbc013_multichannel_roles.ipynb`](notebooks/04_bbbc013_multichannel_roles.ipynb).
 
 ## Data
 

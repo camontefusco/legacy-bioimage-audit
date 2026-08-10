@@ -30,3 +30,4 @@ jobs:
           python scripts/create_educational_sensitivity_notebook.py
           python scripts/create_bbbc039_case_study_notebook.py
           python scripts/create_bbbc050_case_study_notebook.py
+          python scripts/create_bbbc013_case_study_notebook.py

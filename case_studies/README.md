@@ -75,3 +75,18 @@ jupyter nbconvert --to notebook --execute --inplace \
 The notebook compares central-plane, mean-projection, and maximum-projection
 operationalizations. It uses three files from one training embryo as repeated
 teaching observations, not as independent biological replicates.
+
+## Third case: BBBC013
+
+Retrieve and run the CC BY 3.0 paired-channel case with:
+
+```bash
+python scripts/download_bbbc013.py
+python scripts/create_bbbc013_case_study_notebook.py
+jupyter nbconvert --to notebook --execute --inplace \
+  notebooks/04_bbbc013_multichannel_roles.ipynb
+```
+
+DNA defines nuclear objects and GFP supplies the measured signal. The notebook
+varies the perinuclear-ring width to show that a derived ratio depends on the
+region definition. Three wells are teaching observations, not replicates.
