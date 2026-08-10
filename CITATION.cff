@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this historical reconstruction, cite the archived release associated with the eventual repository record."
-title: "Legacy bioimage analysis: an educational reconstruction and sensitivity case study"
+message: "If you use this technical tutorial or software, cite the archived release associated with the repository record."
+title: "When raw microscopy data are gone: a responsible workflow for auditing legacy bioimage analyses"
 type: software
 authors:
   - family-names: "Montefusco-Pereira"
@@ -9,10 +9,11 @@ version: "0.1.0-dev"
 date-released: "2026-08-01"
 repository-code: "https://github.com/camontefusco/legacy-bioimage-audit"
 abstract: >-
-  Historical reconstruction and educational case study of the image-analysis
-  code associated with JMM manuscript MIMET-D-26-00638. The package teaches
-  analytical provenance, sensitivity, quality control, and experimental-unit
-  design. It is not a validated biological treatment-effect pipeline.
+  Technical tutorial and historical reconstruction for auditing legacy
+  bioimage analyses when raw acquisitions or labels are unavailable. The
+  package demonstrates provenance, sensitivity, quality control, experimental
+  units, and responsible stopping rules. It is not a validated biological
+  treatment-effect pipeline.
 keywords:
   - bioimage analysis
   - reproducibility

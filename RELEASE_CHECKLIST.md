@@ -22,12 +22,12 @@
 - [x] GitHub Actions passes on Python 3.10 and 3.12 in the public repository.
 - [ ] A clean installation is tested on another computer or container.
 
-## Publication checks
+## Archival publication checks
 
-- [ ] Replace placeholder author/affiliation fields in `paper.md`.
-- [ ] Complete and document at least one teaching pilot.
+- [x] Pivot `paper.md` to a technical report that does not claim educational effectiveness.
 - [x] Prepare a data-minimizing 3–5 learner pilot package under `pilot/`.
-- [ ] Revise the module in response to pilot findings.
+- [ ] Confirm acknowledgements and optional current affiliation.
+- [ ] Complete final citation and public-file audit.
 - [ ] Create a tagged GitHub release.
 - [ ] Archive the release in Zenodo and add the DOI to `CITATION.cff`.
-- [ ] Submit the archived module and `paper.md` to JOSE.
+- [ ] Publish the technical report with the archived release.

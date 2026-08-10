@@ -1,47 +1,26 @@
 # Publication strategy
 
-## Recommended route
+## Current route: technical report and software release
 
-### 1. Release the learning module on GitHub and Zenodo
+The immediate output is a versioned GitHub release archived in Zenodo with a DOI. The accompanying report, `paper.md`, is a self-contained technical tutorial on responsible legacy bioimage-analysis auditing. It makes no claim of educational effectiveness and does not require a teaching cohort.
 
-Publish a versioned GitHub release, then archive that release in Zenodo to obtain a DOI. This creates a stable, citable research object but is not peer review.
+Before archival release:
 
-Release only after ownership, contributor attribution, and licensing are agreed. The public release should contain the synthetic panels, notebook, tests, guide, and claim boundary. Thesis-derived images should remain excluded unless redistribution permission is documented.
+1. Confirm acknowledgements and whether a current affiliation should be listed.
+2. Perform one final public-file and citation audit.
+3. Create release `v0.1.0` and archive it through Zenodo.
+4. Add the DOI to `CITATION.cff` and the report.
 
-### 2. Submit to the Journal of Open Source Education (JOSE)
+## Possible later journal route
 
-JOSE is the strongest fit because the contribution is an open computational learning module, not a newly validated biological method. Position it as a case-based lesson in analytical provenance, parameter sensitivity, experimental units, and responsible stopping rules for legacy bioimage analysis.
+An expanded, literature-grounded **Opinion Article** may be considered for F1000Research if publication charges and scope are acceptable. The paper would argue for explicit stopping rules and claim boundaries when raw bioimage data are lost. It should not present the synthetic demonstration as new biological research.
 
-Before submission:
+## Routes not recommended now
 
-1. Confirm that the selected MIT code license and CC BY 4.0 content license are compatible with contributor and institutional obligations.
-2. Complete a small teaching pilot, ideally with 3–5 learners or one workshop.
-3. Revise the module from observed completion times and points of confusion.
-4. Add installation checks or an environment lock file.
-5. Finish `paper.md` and `paper.bib`, keeping the paper focused on educational need and design.
-6. Make a tagged release and archive it before or during review as requested by the journal.
+- **JOSE:** no longer the target because we are not claiming or evaluating a learning intervention. The pilot package remains optional.
+- **JOSS:** premature. Current screening emphasizes sustained open development, research use or impact, and community evidence. A newly public single-case reconstruction should not be stretched to meet those criteria.
+- **Method or segmentation journals:** unsuitable without raw data, ground truth, independent replication, and method validation.
 
-Suggested title: **Auditing legacy bioimage analyses: a computational learning module on provenance, sensitivity, and limits of inference**.
+## Dissemination after DOI release
 
-## Secondary possibilities
-
-- **PLOS Computational Biology, Education/Quick Tips:** a stretch option after broadening the lesson beyond this case and contacting the Education editors. The article should teach a general audit workflow rather than report the original biological results.
-- **F1000Research Method Article or Software Tool Article:** not the first choice. A Method Article ordinarily needs validation and data, while a Software Tool paper needs a clearer novel-tool claim. Both would invite claims the current evidence cannot support.
-- **NEUBIAS and the Centre for Open Bioimage Analysis training collections:** useful community dissemination after release, but not substitutes for peer review.
-
-## Explicitly unsuitable positioning
-
-Do not submit this as a bacterial-segmentation benchmark, treatment-effect study, reanalysis of the thesis biology, or validated microscopy method. No public component should imply that synthetic masks establish biological truth.
-
-## Go/no-go checklist
-
-Proceed to public release only if all are **yes**:
-
-- [ ] Contributors and affiliations are confirmed.
-- [x] MIT code and CC BY 4.0 educational-content licenses have been selected by the repository owner.
-- [ ] No thesis-derived or third-party image is included without permission.
-- [ ] A fresh install can run the notebook on the synthetic data.
-- [ ] Tests pass.
-- [ ] The README and paper state that the panels are synthetic and non-biological.
-
-Proceed to JOSE submission only if the release checklist is complete and at least one teaching pilot has been documented.
+Share the citable resource with bioimage-analysis training and reproducibility communities such as NEUBIAS and the Centre for Open Bioimage Analysis. Describe it as a technical tutorial and recovery case, not a validated segmentation method.

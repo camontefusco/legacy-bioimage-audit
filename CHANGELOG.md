@@ -10,3 +10,4 @@
 - Added a self-contained synthetic-data learning module and sensitivity analysis.
 - Added a JOSE-oriented paper skeleton, teaching-pilot template, CI, and public-release checklist.
 - Licensed software under MIT and original educational content and synthetic graphics under CC BY 4.0.
+- Pivoted the manuscript from an evaluated learning-module submission to a self-contained technical tutorial and Zenodo release.

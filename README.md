@@ -19,9 +19,9 @@ Also read `DATA_PROVENANCE.md` for the exact data boundary and the licensing sec
 
 For teaching use, start with `EDUCATIONAL_USE_GUIDE.md`. `CLAIM_BOUNDARY.md` defines the statements that the available evidence does and does not support.
 
-`PUBLICATION_STRATEGY.md` gives the release and journal-submission route. `paper.md` is a JOSE-oriented manuscript skeleton; it deliberately identifies the missing teaching pilot instead of claiming educational effectiveness prematurely.
+`PUBLICATION_STRATEGY.md` gives the release route. `paper.md` is a technical tutorial/report on auditing legacy bioimage analyses when raw data are unavailable; it makes no claim of educational effectiveness.
 
-The small-pilot package under `pilot/` includes invitation text, a facilitator guide, a learner worksheet, anonymous feedback prompts, and a session-level results template.
+The optional small-pilot package under `pilot/` includes invitation text, a facilitator guide, a learner worksheet, anonymous feedback prompts, and a session-level results template. Running a pilot is not required for the technical report or archival release.
 
 The executable teaching notebook is `notebooks/01_educational_sensitivity_analysis.ipynb`. It compares analysis configurations panel by panel and deliberately omits treatment hypothesis tests and predictive modeling.
 
