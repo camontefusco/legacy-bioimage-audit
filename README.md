@@ -1,6 +1,6 @@
 # Host–pathogen microscopy analysis: submission reconstruction
 
-This repository candidate reconstructs the image-analysis branch used to generate numerical results for the manuscript submitted as JMM `MIMET-D-26-00638`.
+This repository candidate reconstructs the image-analysis branch used to generate numerical results for the manuscript submitted as JMM `MIMET-D-26-00638`. Its intended future use is as a historical reconstruction and educational case study based on 12 rendered thesis panels.
 
 ## Status
 
@@ -16,6 +16,8 @@ The repository intentionally separates:
 See `ANALYSIS_BRANCHES.md` and `MANUSCRIPT_CODE_RECONCILIATION.md` before interpreting any output.
 
 Also read `DATA_PROVENANCE.md` for the exact data boundary and `LICENSE_PENDING.md` before copying or distributing the package.
+
+For teaching use, start with `EDUCATIONAL_USE_GUIDE.md`. `CLAIM_BOUNDARY.md` defines the statements that the available evidence does and does not support.
 
 ## Data
 

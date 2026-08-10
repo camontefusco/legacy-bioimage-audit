@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this historical reconstruction, cite the archived release associated with the eventual repository record."
-title: "Host-pathogen microscopy analysis: submission reconstruction"
+title: "Legacy bioimage analysis: an educational reconstruction and sensitivity case study"
 type: software
 authors:
   - family-names: "Montefusco-Pereira"
@@ -9,13 +9,13 @@ version: "0.1.0-dev"
 date-released: "2026-08-01"
 repository-code: "https://github.com/camontefusco/REPOSITORY-NOT-YET-CREATED"
 abstract: >-
-  Historical reconstruction of the image-analysis code associated with JMM
-  manuscript MIMET-D-26-00638. The package documents analytical provenance
-  and is not a validated biological treatment-effect pipeline.
+  Historical reconstruction and educational case study of the image-analysis
+  code associated with JMM manuscript MIMET-D-26-00638. The package teaches
+  analytical provenance, sensitivity, quality control, and experimental-unit
+  design. It is not a validated biological treatment-effect pipeline.
 keywords:
   - bioimage analysis
   - reproducibility
   - Pseudomonas aeruginosa
   - microscopy
 license: "LicenseRef-Pending"
-
