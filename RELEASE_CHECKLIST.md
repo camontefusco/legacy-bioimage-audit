@@ -19,7 +19,7 @@
 - [x] The teaching notebook runs without private data.
 - [x] Repository scan found no credentials or personal filesystem paths.
 - [x] Optional GUI dependencies are separated from core installation.
-- [ ] GitHub Actions passes on the public repository.
+- [x] GitHub Actions passes on Python 3.10 and 3.12 in the public repository.
 - [ ] A clean installation is tested on another computer or container.
 
 ## Publication checks
