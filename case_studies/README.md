@@ -60,3 +60,18 @@ python scripts/create_bbbc039_case_study_notebook.py
 jupyter nbconvert --to notebook --execute --inplace \
   notebooks/02_bbbc039_published_image_transfer.ipynb
 ```
+
+## Second case: BBBC050
+
+Retrieve and run the CC BY 3.0 three-dimensional case with:
+
+```bash
+python scripts/download_bbbc050.py
+python scripts/create_bbbc050_case_study_notebook.py
+jupyter nbconvert --to notebook --execute --inplace \
+  notebooks/03_bbbc050_3d_projection_transfer.ipynb
+```
+
+The notebook compares central-plane, mean-projection, and maximum-projection
+operationalizations. It uses three files from one training embryo as repeated
+teaching observations, not as independent biological replicates.

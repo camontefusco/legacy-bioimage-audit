@@ -25,5 +25,8 @@ jobs:
         run: pytest
       - name: Generate public teaching data
         run: python scripts/generate_synthetic_panels.py
-      - name: Verify notebook can be constructed
-        run: python scripts/create_educational_sensitivity_notebook.py
+      - name: Verify notebooks can be constructed
+        run: |
+          python scripts/create_educational_sensitivity_notebook.py
+          python scripts/create_bbbc039_case_study_notebook.py
+          python scripts/create_bbbc050_case_study_notebook.py

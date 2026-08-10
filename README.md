@@ -38,6 +38,8 @@ Five published-image transfer exercises have been feasibility-audited in
 reproductions or biological validation, and no third-party images are bundled.
 The first executable transfer case is
 [`notebooks/02_bbbc039_published_image_transfer.ipynb`](notebooks/02_bbbc039_published_image_transfer.ipynb).
+The second is a 3D-to-2D operationalization exercise using CC BY 3.0 BBBC050:
+[`notebooks/03_bbbc050_3d_projection_transfer.ipynb`](notebooks/03_bbbc050_3d_projection_transfer.ipynb).
 
 ## Data
 

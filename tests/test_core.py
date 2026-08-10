@@ -11,7 +11,12 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.run_submission_reconstruction import segment_submission_branch
 from src.metrics import summarize_objects
-from src.segmentation import decode_color_instance_mask, load_grayscale_image
+from src.segmentation import (
+    decode_color_instance_mask,
+    load_grayscale_image,
+    load_tiff_stack,
+    project_stack,
+)
 
 
 def test_metadata_describes_twelve_panels() -> None:
@@ -83,3 +88,19 @@ def test_decode_color_instance_mask_labels_connected_foreground() -> None:
     assert labels[0, 0] > 0
     assert labels[2, 3] > 0
     assert labels[0, 0] != labels[2, 3]
+
+
+def test_load_and_project_3d_tiff_stack(tmp_path) -> None:
+    import tifffile
+
+    source = np.arange(3 * 4 * 5, dtype=np.uint16).reshape(3, 4, 5)
+    path = tmp_path / "stack.tif"
+    tifffile.imwrite(path, source, photometric="minisblack")
+
+    loaded = load_tiff_stack(path)
+
+    assert loaded.dtype == np.uint16
+    assert np.array_equal(loaded, source)
+    assert np.array_equal(project_stack(loaded, "central"), source[1])
+    assert np.array_equal(project_stack(loaded, "maximum"), source.max(axis=0))
+    assert np.allclose(project_stack(loaded, "mean"), source.mean(axis=0))

@@ -6,6 +6,7 @@ pandas
 pillow
 scikit-image
 scipy
+tifffile
 
 # Plotting and figures
 matplotlib

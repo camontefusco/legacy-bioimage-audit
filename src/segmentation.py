@@ -20,6 +20,7 @@ import numpy as np
 from PIL import Image
 from scipy import ndimage as ndi
 from skimage import filters, measure, morphology, segmentation, util
+import tifffile
 
 
 # Restrict allowed channel names.
@@ -77,6 +78,38 @@ def load_grayscale_image(path: str | Path) -> np.ndarray:
             "Select a channel, z-plane, or timepoint explicitly before analysis."
         )
     return image
+
+
+def load_tiff_stack(path: str | Path) -> np.ndarray:
+    """Load a single-channel 3D TIFF stack while preserving its bit depth."""
+
+    path = Path(path)
+    if not path.exists():
+        raise FileNotFoundError(f"Image not found: {path}")
+    stack = tifffile.imread(path)
+    if stack.ndim != 3:
+        raise ValueError(
+            "Expected a 3D single-channel TIFF stack with shape (z, y, x). "
+            f"Received shape: {stack.shape}"
+        )
+    return stack
+
+
+def project_stack(
+    stack: np.ndarray,
+    method: Literal["central", "mean", "maximum"],
+) -> np.ndarray:
+    """Create an explicit 2D view of a `(z, y, x)` stack."""
+
+    if stack.ndim != 3:
+        raise ValueError(f"Expected a 3D stack. Received shape: {stack.shape}")
+    if method == "central":
+        return stack[stack.shape[0] // 2]
+    if method == "mean":
+        return stack.mean(axis=0)
+    if method == "maximum":
+        return stack.max(axis=0)
+    raise ValueError(f"Unsupported projection method: {method}")
 
 
 def decode_color_instance_mask(mask: np.ndarray) -> np.ndarray:
