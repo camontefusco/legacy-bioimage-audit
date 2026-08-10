@@ -26,6 +26,7 @@
 
 - [ ] Replace placeholder author/affiliation fields in `paper.md`.
 - [ ] Complete and document at least one teaching pilot.
+- [x] Prepare a data-minimizing 3–5 learner pilot package under `pilot/`.
 - [ ] Revise the module in response to pilot findings.
 - [ ] Create a tagged GitHub release.
 - [ ] Archive the release in Zenodo and add the DOI to `CITATION.cff`.

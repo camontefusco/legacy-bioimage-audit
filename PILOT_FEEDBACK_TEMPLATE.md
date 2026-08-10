@@ -1,4 +1,6 @@
-# Teaching pilot record
+# Teaching pilot record (legacy single-file template)
+
+The runnable pilot kit is now under `pilot/`. This file is retained as a compact alternative.
 
 Use one copy per session. Do not collect sensitive personal information.
 
