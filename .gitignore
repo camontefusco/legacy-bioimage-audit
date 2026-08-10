@@ -9,4 +9,6 @@ venv/
 data/raw_confocal_images/
 results/regenerated_submission/
 results/figures/
+results/educational_sensitivity/
 output/pdf/*.docx
+tmp/
