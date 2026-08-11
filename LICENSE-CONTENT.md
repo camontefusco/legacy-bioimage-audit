@@ -12,7 +12,7 @@ Legal code: <https://creativecommons.org/licenses/by/4.0/legalcode>
 
 Suggested attribution:
 
-> Montefusco-Pereira, Carlos Victor (2026). *Auditing legacy bioimage analyses: a computational learning module on provenance, sensitivity, and limits of inference*. CC BY 4.0.
+> Montefusco-Pereira, Carlos Victor (2026). *From qualitative microscopy observations to quantitative data: an open computational learning module for experimental scientists*. CC BY 4.0.
 
 ## Exclusions
 

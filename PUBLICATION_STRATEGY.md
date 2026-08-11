@@ -1,8 +1,8 @@
 # Publication strategy
 
-## Current route: technical report and software release
+## Current route: open resource plus PLOS Education enquiry
 
-The immediate output is a versioned GitHub release archived in Zenodo with a DOI. The accompanying report, `paper.md`, is a self-contained transition guide for experimental scientists converting qualitative observations into quantitative data. It makes no claim of educational effectiveness and does not require a teaching cohort.
+The immediate output is an open GitHub resource and archived technical report. The leading active journal option is a PLOS Computational Biology Education / Quick Tips presubmission enquiry. The proposed article teaches a scientific and computational skill and makes no claim of educational effectiveness.
 
 Before archival release:
 
@@ -11,15 +11,18 @@ Before archival release:
 3. Create release `v0.1.0` and archive it through Zenodo.
 4. Add the DOI to `CITATION.cff` and the report.
 
-## Possible later journal route
+## Leading active journal route
 
-An expanded, literature-grounded **Opinion Article** may be considered for F1000Research if publication charges and scope are acceptable. The paper would argue that measurement definition, experimental hierarchy, and validation—not software alone—are the core of an experimental scientist's transition into data science. It should not present the synthetic demonstration as new biological research.
+Reframe the workflow as seven declarative Quick Tips and use the notebooks as an executable companion. Send the title, tip outline, synopsis, novelty statement, and resource links to the PLOS Computational Biology Education editors before reformatting the full manuscript. PLOS states that Education/Quick Tips front matter has no APC.
+
+Keep JOSE as a fallback if submissions reopen. Consider a Journal of Microscopy Short Review only after an encouraging editorial enquiry. See `QUALITY_AND_VENUE_REVIEW.md` for the evidence and full ranking.
 
 ## Routes not recommended now
 
-- **JOSE:** no longer the target because we are not claiming or evaluating a learning intervention. The pilot package remains optional.
+- **JOSE now:** submissions are paused. Reassess if it reopens; do not imply learner evaluation.
 - **JOSS:** premature. Current screening emphasizes sustained open development, research use or impact, and community evidence. A newly public single-case reconstruction should not be stretched to meet those criteria.
 - **Method or segmentation journals:** unsuitable without raw data, ground truth, independent replication, and method validation.
+- **Frontiers in Education CIP:** assessment-oriented and fee-bearing; poor fit for an unevaluated self-study resource.
 
 ## Dissemination after DOI release
 

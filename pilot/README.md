@@ -1,8 +1,8 @@
-# Small teaching pilot
+# Optional feedback kit (inactive)
 
 ## Purpose
 
-This pilot tests whether learners can use the module, understand its claim boundaries, and complete the core audit tasks. It does **not** test biological effectiveness or establish formal educational efficacy.
+These templates are retained for instructors who may independently choose to gather informal implementation feedback. No pilot, independent evaluation, or learner-outcomes study is planned as part of this project. The templates do **not** establish usability or educational efficacy, and they are not a prerequisite for using, releasing, or publishing the self-study module.
 
 ## Recommended format
 
@@ -22,7 +22,7 @@ This pilot tests whether learners can use the module, understand its claim bound
 
 ## Minimum completion rule
 
-The pilot is complete when at least three learners have attempted the module and the facilitator has recorded:
+If an instructor elects to use the kit, a local feedback cycle may be closed after the facilitator has recorded:
 
 1. approximate completion times;
 2. installation or execution failures;

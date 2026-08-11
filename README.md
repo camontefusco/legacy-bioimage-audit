@@ -16,7 +16,7 @@ The citation-resolved archival report is available at `output/pdf/qualitative-to
 
 The immutable `v0.1.0` archive is available from [Zenodo](https://doi.org/10.5281/zenodo.21876822). The current repository includes additional published-image cases developed after that archive.
 
-The optional small-pilot package under `pilot/` includes invitation text, a facilitator guide, a learner worksheet, anonymous feedback prompts, and a session-level results template. Running a pilot is not required for the technical report or archival release.
+The inactive optional feedback kit under `pilot/` is retained for instructors who may wish to adapt it locally. No pilot or independent evaluation is planned, and the kit is not required for the resource or its publication.
 
 The notebooks are:
 
