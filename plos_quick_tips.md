@@ -93,6 +93,14 @@ Prespecify a response to sensitivity. If all plausible choices support the same 
 
 Practical check: Make a small decision table containing the uncertain choice, plausible alternatives, expected failure mode, diagnostic view, and action if conclusions change. Sensitivity analysis is most informative when the response to instability is decided in advance.
 
+# Worked cases and reproducibility
+
+The companion resource turns Tips 4–6 into three small, inspectable cases. Each case uses a fixed, declared set of images, deterministic code, and a parameter change chosen before the output is interpreted. The examples are teaching demonstrations, not representative samples, performance benchmarks, or biological experiments.
+
+In the BBBC050 case, three alternative reductions of a small three-dimensional stack are compared: a central plane, a mean projection, and a maximum projection. The resulting foreground agreement and object counts differ, showing why dimensional reduction must be recorded as part of the measurement definition. In the BBBC039 case, the same thresholded foreground is passed to connected components and watershed splitting. Foreground overlap remains high while object counts diverge, separating pixel agreement from instance-definition validity. In the BBBC013 case, paired channels are held constant while the width of an exterior ring is changed; the intensity ratio changes, demonstrating that the comparison region is part of the construct.
+
+The repository provides the notebooks, environment information, tests, retrieval scripts, manifests, and rendered outputs needed to reproduce these demonstrations. Public images are retrieved from their authoritative collections rather than redistributed, and synthetic images are generated deterministically. The exact outputs and file-level provenance are archived with the release. Because the cases are intentionally small and fixed, they support inspection of analytical consequences but do not support estimates of biological variability, method ranking, or learner effectiveness.
+
 # Tip 7: Stop the claim where the evidence stops
 
 Match each statement to the strongest evidence actually available. A rendered figure can support a statement about visible appearance. A mask can support a statement about pixels selected under a declared rule. Reference annotations can support a named agreement statistic. Biological treatment claims additionally require sample identity, appropriate controls, independent replication, and a prespecified analysis.
@@ -105,7 +113,7 @@ Practical check: Underline every noun and verb in the proposed conclusion. For e
 
 # Conclusion
 
-The transition from experimental observation to data science is not completed when an image becomes a table. It is completed when the analyst can explain what every value means, which experimental unit it describes, how processing choices affect it, how extraction was checked, and which claims remain outside the evidence. The seven tips provide a repeatable path through those decisions. The open companion notebooks are deliberately transparent and small so learners can inspect the consequences of each choice rather than treat a sophisticated pipeline as an oracle.
+The transition from experimental observation to defensible quantitative image data is not achieved when an image becomes a table. It is achieved when the analyst can explain what every value means, which experimental unit it describes, how processing choices affect it, how extraction was checked, and which claims remain outside the evidence. The seven tips provide a repeatable path through those decisions. The open companion notebooks are deliberately transparent and small so learners can inspect the consequences of each choice rather than treat a sophisticated pipeline as an oracle.
 
 # Data and software availability
 
@@ -113,6 +121,6 @@ The companion resource, notebooks, tests, synthetic graphics, and retrieval scri
 
 # AI-use disclosure
 
-OpenAI language and coding tools were used for artifact recovery, code and documentation drafting, literature discovery support, and language editing. The author checked cited sources, reviewed and revised the manuscript and code, executed the tests and notebooks, and remains responsible for accuracy, attribution, and all claims.
+OpenAI ChatGPT and Codex were used for artifact recovery, code and documentation drafting, literature-discovery support, and language editing. The author checked cited sources against the original publications, reviewed and revised the manuscript and code, executed the tests and notebooks, and remains responsible for accuracy, attribution, and all claims.
 
 # References
