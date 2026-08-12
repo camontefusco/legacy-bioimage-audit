@@ -6,7 +6,9 @@ tags:
   - data science education
   - reproducibility
 author: Carlos Victor Montefusco-Pereira
-affiliation: Independent researcher
+affiliation: Independent Researcher in Data Science and Artificial Intelligence in Industrial Pharmaceutics, Berlin, Germany
+email: cmontefusco@gmail.com
+orcid: 0000-0003-4167-4653
 date: 2026-08-12
 bibliography: paper.bib
 ---
@@ -122,5 +124,21 @@ The companion resource, notebooks, tests, synthetic graphics, and retrieval scri
 # AI-use disclosure
 
 OpenAI ChatGPT and Codex were used for artifact recovery, code and documentation drafting, literature-discovery support, and language editing. The author checked cited sources against the original publications, reviewed and revised the manuscript and code, executed the tests and notebooks, and remains responsible for accuracy, attribution, and all claims.
+
+# Funding
+
+The author received no specific funding for this work.
+
+# Competing interests
+
+The author has declared that no competing interests exist.
+
+# Acknowledgements
+
+The author acknowledges the Helmholtz Institute for Pharmaceutical Research Saarland (HIPS), where the cell model was developed, the images were acquired, and the doctoral thesis work that motivated this resource was conducted.
+
+# Author contributions
+
+Carlos Victor Montefusco-Pereira: Conceptualization, methodology, software, investigation, data curation, visualization, writing—original draft, and writing—review and editing.
 
 # References
