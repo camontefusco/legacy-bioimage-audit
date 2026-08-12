@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
+  <title id="title">Seven-tip workflow from qualitative microscopy observation to a bounded quantitative claim</title>
+  <desc id="desc">A left-to-right workflow of eight rounded boxes: observation, alternative explanations, construct, operational definition, hierarchy-aware table, quality control, sensitivity analysis, and bounded claim. Seven numbered tip labels connect the stages.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#44546a"/></marker>
+    <style>
+      .box { fill:#f4f8fb; stroke:#176b87; stroke-width:3; rx:18; }
+      .end { fill:#e8f5ee; stroke:#24734a; stroke-width:3; rx:18; }
+      .label { font: 600 25px Arial, sans-serif; fill:#17324d; text-anchor:middle; }
+      .small { font: 21px Arial, sans-serif; fill:#334155; text-anchor:middle; }
+      .tip { font: 700 22px Arial, sans-serif; fill:#8a3c13; text-anchor:middle; }
+      .arrow { stroke:#44546a; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1400" height="800" fill="white"/>
+  <text x="700" y="60" class="label" style="font-size:34px">From qualitative observation to a defensible quantitative claim</text>
+
+  <rect class="box" x="55" y="120" width="280" height="125"/><text class="label" x="195" y="168">Qualitative</text><text class="label" x="195" y="202">observation</text>
+  <rect class="box" x="405" y="120" width="280" height="125"/><text class="label" x="545" y="168">Alternative</text><text class="label" x="545" y="202">explanations</text>
+  <rect class="box" x="755" y="120" width="280" height="125"/><text class="label" x="895" y="187">Construct</text>
+  <rect class="box" x="1105" y="120" width="240" height="125"/><text class="label" x="1225" y="168">Operational</text><text class="label" x="1225" y="202">definition</text>
+
+  <path class="arrow" d="M335 182 L395 182"/><path class="arrow" d="M685 182 L745 182"/><path class="arrow" d="M1035 182 L1095 182"/>
+  <text class="tip" x="365" y="150">Tip 1</text><text class="tip" x="715" y="150">Tip 2</text><text class="tip" x="1065" y="150">Tip 4</text>
+
+  <rect class="box" x="1105" y="410" width="240" height="125"/><text class="label" x="1225" y="458">Hierarchy-aware</text><text class="label" x="1225" y="492">data table</text>
+  <rect class="box" x="755" y="410" width="280" height="125"/><text class="label" x="895" y="478">Quality control</text>
+  <rect class="box" x="405" y="410" width="280" height="125"/><text class="label" x="545" y="458">Sensitivity</text><text class="label" x="545" y="492">analysis</text>
+  <rect class="end" x="55" y="410" width="280" height="125"/><text class="label" x="195" y="458">Bounded</text><text class="label" x="195" y="492">claim</text>
+
+  <path class="arrow" d="M1225 245 L1225 400"/><path class="arrow" d="M1105 472 L1045 472"/><path class="arrow" d="M755 472 L695 472"/><path class="arrow" d="M405 472 L345 472"/>
+  <text class="tip" x="1275" y="330">Tip 3</text><text class="tip" x="1075" y="440">Tip 5</text><text class="tip" x="725" y="440">Tip 6</text><text class="tip" x="375" y="440">Tip 7</text>
+
+  <text class="small" x="195" y="615">Describe first</text><text class="small" x="195" y="645">Interpret later</text>
+  <text class="small" x="545" y="615">Ask whether reasonable</text><text class="small" x="545" y="645">choices change the result</text>
+  <text class="small" x="895" y="615">Inspect images, masks,</text><text class="small" x="895" y="645">overlays, and exclusions</text>
+  <text class="small" x="1225" y="615">Keep experiment, sample,</text><text class="small" x="1225" y="645">field, and object distinct</text>
+  <text class="small" x="700" y="735">Code makes each scientific decision visible, repeatable, and open to revision.</text>
+</svg>

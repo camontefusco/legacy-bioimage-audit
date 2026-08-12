@@ -48,7 +48,7 @@ The synthetic notebook is immediately usable, while three notebooks require expl
 
 Recommended angle: **“Quick tips for turning qualitative microscopy observations into quantitative data.”** The tips should follow the existing workflow: describe before interpreting; define the construct; preserve experimental hierarchy; make processing choices explicit; inspect masks and intermediate states; test sensitivity; stop claims at the evidence boundary. The notebooks become the worked companion resource rather than purported validation.
 
-Main risk: topical overlap. A short presubmission enquiry should explicitly distinguish the module from broad quantitative-bioimaging planning guidance and from general medical-image-analysis tips.
+Main risk: topical overlap. The manuscript should explicitly distinguish the module from broad quantitative-bioimaging planning guidance and from general medical-image-analysis tips. PLOS currently states that it no longer accepts presubmission enquiries, so this positioning must be strong enough for direct full-manuscript submission.
 
 ### 2. Journal of Open Source Education (JOSE) — learning module
 
@@ -77,7 +77,7 @@ Main risk: the journal prioritizes microscopy techniques and state-of-the-art ap
 
 ## Recommended decision
 
-Prepare a one-page PLOS Computational Biology Education presubmission enquiry containing a proposed title, seven tip headings, a 150-word synopsis, explicit novelty positioning, the repository and archive links, and the statement that no learner-outcomes claim is made. Do not reformat the full paper until the Education Editor indicates interest. Keep JOSE as the no-fee fallback if it reopens.
+Prepare and submit a complete PLOS Computational Biology Education manuscript containing seven tip headings, explicit novelty positioning, a summary workflow figure, the repository and archive links, and the statement that no learner-outcomes claim is made. Select article type `Education` and section `General`. Keep JOSE as the no-fee fallback if it reopens.
 
 ## Authoritative venue pages checked
 

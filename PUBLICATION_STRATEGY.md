@@ -1,8 +1,8 @@
 # Publication strategy
 
-## Current route: open resource plus PLOS Education enquiry
+## Current route: open resource plus PLOS Education submission
 
-The immediate output is an open GitHub resource and archived technical report. The leading active journal option is a PLOS Computational Biology Education / Quick Tips presubmission enquiry. The proposed article teaches a scientific and computational skill and makes no claim of educational effectiveness.
+The immediate output is an open GitHub resource and archived technical report. The leading active journal option is a full PLOS Computational Biology Education / Quick Tips submission. The proposed article teaches a scientific and computational skill and makes no claim of educational effectiveness.
 
 Before archival release:
 
@@ -13,7 +13,7 @@ Before archival release:
 
 ## Leading active journal route
 
-Reframe the workflow as seven declarative Quick Tips and use the notebooks as an executable companion. Send the title, tip outline, synopsis, novelty statement, and resource links to the PLOS Computational Biology Education editors before reformatting the full manuscript. PLOS states that Education/Quick Tips front matter has no APC.
+Reframe the workflow as seven declarative Quick Tips and use the notebooks as an executable companion. PLOS currently states that it no longer accepts presubmission enquiries; submit the completed manuscript as article type `Education` in the `General` section. PLOS states that Education/Quick Tips front matter has no APC.
 
 Keep JOSE as a fallback if submissions reopen. Consider a Journal of Microscopy Short Review only after an encouraging editorial enquiry. See `QUALITY_AND_VENUE_REVIEW.md` for the evidence and full ranking.
 

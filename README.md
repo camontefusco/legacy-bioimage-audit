@@ -12,6 +12,8 @@ Start with `EXPERIMENTAL_TO_DATA_SCIENCE_GUIDE.md`, then work through the notebo
 
 `PUBLICATION_STRATEGY.md` gives the release route. `paper.md` is a transition guide from qualitative experimental observation to quantitative analysis; it makes no claim of educational effectiveness.
 
+The venue-specific PLOS Computational Biology Education draft is `plos_quick_tips.md`; its visually verified reading copy is `output/pdf/plos-quick-tips-submission.pdf`. `PLOS_SUBMISSION_CHECKLIST.md` records the remaining author metadata and archive steps. This draft preserves the same evidence boundaries and does not claim learner evaluation.
+
 The citation-resolved archival report is available at `output/pdf/qualitative-to-quantitative-transition-guide.pdf`. Rebuild and QA instructions are in `REPORT_BUILD.md`.
 
 The immutable `v0.1.0` archive is available from [Zenodo](https://doi.org/10.5281/zenodo.21876822). The current repository includes additional published-image cases developed after that archive.
